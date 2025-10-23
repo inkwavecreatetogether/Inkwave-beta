@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inkwave — Beta</title>
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Inkwave logo">
+      </div>
+      <nav class="nav">
+        <a href="#how">How</a>
+        <a href="#gallery">Gallery</a>
+        <a id="joinBtn" href="#join">Join Beta</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card left">
+        <h2 style="margin-top:0">Inkwave — Draw. Evolve. Connect.</h2>
+        <div class="canvas-wrap card" id="canvasContainer">
+          <div style="flex:1">
+            <canvas id="drawCanvas" class="canvas"></canvas>
+          </div>
+          <aside class="tools">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="font-weight:700">Tools</div>
+              <div class="faint">Beta</div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <label class="faint">Brush</label>
+              <input id="size" type="range" min="1" max="24" value="3" style="flex:1">
+              <div id="sizeVal">3</div>
+            </div>
+            <div class="controls">
+              <button id="playBtn" class="small-btn">Play</button>
+              <button id="pauseBtn" class="small-btn">Pause</button>
+              <button id="clearBtn" class="small-btn">Clear</button>
+            </div>
+            <div style="margin-top:8px">
+              <div style="font-size:13px;margin-bottom:6px">Colors</div>
+              <div style="display:flex;gap:8px">
+                <div class="color-swatch" data-color="#0b2b3a" style="background:#0b2b3a"></div>
+                <div class="color-swatch" data-color="#223344" style="background:#223344"></div>
+                <div class="color-swatch" data-color="#6ee7b7" style="background:#6ee7b7"></div>
+                <div class="color-swatch" data-color="#ffb86b" style="background:#ffb86b"></div>
+                <div class="color-swatch" data-color="#ff6b9e" style="background:#ff6b9e"></div>
+              </div>
+            </div>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+              <button id="aiBtn" class="tool-btn">AI Suggest</button>
+              <button id="exportBtn" class="tool-btn">Export PNG</button>
+            </div>
+            <div style="margin-top:6px" class="faint">Tip: Draw with mouse or touch.</div>
+          </aside>
+        </div>
+      </section>
+
+      <aside class="right card">
+        <div class="mock-phone">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div style="font-weight:700">Live Preview</div>
+            <div style="font-size:12px;color:var(--muted)">Sync • Offline</div>
+          </div>
+          <div id="mockThumb" class="mock-thumb" style="margin-top:12px"></div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">AI-driven strokes, style capture, and collaborative sessions.</div>
+          <div style="margin-top:12px" class="gallery">
+            <img src="./assets/sample1.png" alt="s1">
+            <img src="./assets/sample2.png" alt="s2">
+            <img src="./assets/sample3.png" alt="s3">
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <section id="gallery" class="card" style="margin-top:18px">
+      <h3>Community Gallery (beta)</h3>
+      <div class="gallery">
+        <img src="./assets/sample1.png" alt="sample1">
+        <img src="./assets/sample2.png" alt="sample2">
+        <img src="./assets/sample3.png" alt="sample3">
+      </div>
+    </section>
+
+    <footer class="footer">© 2025 Inkwave — Draw. Evolve. Connect.</footer>
+  </div>
+
+  <!-- modal join -->
+  <div class="modal-back" id="modalBack">
+    <div class="modal">
+      <h3>Join the Inkwave Beta</h3>
+      <p class="faint">Enter your email to receive a beta link (simulated).</p>
+      <input id="email" class="input" placeholder="you@example.com">
+      <button id="submitJoin" class="tool-btn" style="margin-top:10px">Join Beta</button>
+      <div id="joinMsg" style="margin-top:8px" class="faint"></div>
+    </div>
+  </div>
+
+<script src="./js/app.js"></script>
+</body>
+</html>

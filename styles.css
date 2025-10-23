@@ -1,0 +1,39 @@
+
+:root{
+  --bg1: #04131a;
+  --bg2: #0b2a3a;
+  --accent1: #6ee7b7;
+  --accent2: #7bd3ff;
+  --muted: #9aa7b2;
+  --card: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --maxw: 1200px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#e6eef3;-webkit-font-smoothing:antialiased}
+.container{max-width:var(--maxw);margin:28px auto;padding:22px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:56px}
+.nav a{color:var(--muted);text-decoration:none;margin-left:14px;font-weight:600}
+.hero{display:grid;grid-template-columns:1fr 420px;gap:24px;margin-top:18px;align-items:start}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
+.canvas-wrap{display:flex;gap:12px;align-items:flex-start}
+.left{flex:1}
+.canvas{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(2,8,12,0.6);width:100%;height:560px}
+.tools{width:210px;display:flex;flex-direction:column;gap:10px}
+.tool-btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#04202a;padding:10px;border-radius:10px;border:none;font-weight:800;cursor:pointer}
+.small-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px;border-radius:8px;cursor:pointer}
+.color-swatch{width:28px;height:28px;border-radius:6px;border:2px solid rgba(255,255,255,0.06);cursor:pointer}
+.controls{display:flex;gap:8px;align-items:center;margin-top:6px}
+.right{width:420px}
+.mock-phone{background:linear-gradient(180deg,#061722,#0b2a2b);padding:12px;border-radius:18px;text-align:center}
+.mock-thumb{width:100%;height:360px;background:#fff;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.gallery img{width:100%;border-radius:8px;display:block}
+.footer{margin-top:22px;text-align:center;color:var(--muted);font-size:13px}
+.modal-back{position:fixed;inset:0;background:rgba(2,6,12,0.6);display:none;align-items:center;justify-content:center;z-index:50}
+.modal{background:linear-gradient(180deg,#071523,#081928);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);width:360px;color:#e6eef3}
+.input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef3;margin-top:8px}
+.faint{color:var(--muted);font-size:13px}
+@media(max-width:980px){.hero{grid-template-columns:1fr}.tools{width:100%}.right{width:100%}.canvas{height:420px}}
